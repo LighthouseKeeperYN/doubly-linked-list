@@ -42,7 +42,9 @@ class LinkedList {
   }
 
   insertAt(index, data) {
-    if (this.length <= 1) this.clear();
+    if (this.length === 0) {
+      this.append(data);
+    }
     else {
       let nodeToShift = this._tail;
 
