@@ -8,7 +8,7 @@ class LinkedList {
   }
 
   append(data) {
-    if (this.length === 0) {
+    if (!this.length) {
       const node = new Node(data);
       this._head = node;
       this._tail = node;
@@ -59,7 +59,7 @@ class LinkedList {
   }
 
   isEmpty() {
-    return !this.length && !this._head && !this._tail;
+    return !this.length;
   }
 
   clear() {
